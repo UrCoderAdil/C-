@@ -31,3 +31,61 @@ int main(){
 
 
 }**/
+/**#include <iostream>
+int main() {
+    bool game=true;
+    std::string input[50]={};
+    std::string dish;
+    while(game){
+        std::cout<<"Enter the dish\n";
+
+        std::cin>>dish;
+        if(dish=="q") {
+            game=false;
+        }
+        else{
+            for(int i=0;i<50;i++) {
+                input[i]=dish;
+                ;
+            }
+        }
+    }
+    for(int i=0;!input[i].empty();i++) {
+
+            std::cout<<input[i]<<"Helloo  \n";
+    }
+}**/
+/**#include <iostream>
+int main() {
+    int nums[]={2,3,5,6,8,9,10,1,4};
+    int nu;
+    //sort them with increasing order
+    int siz=sizeof(nums)/sizeof(int);
+    for(int i=0;i<siz-1;i++) {
+        for(int j=0;j<siz-i-1;j++) {
+            if(nums[j]>nums[j+1]) {
+                nu=nums[j];
+                nums[j]=nums[j+1];
+                nums[j+1]=nums[j];
+            }
+        }
+    }
+    for(int k=0;k<siz;k++) {
+        std::cout<<nums[k]<<" ";
+    }
+}
+**/
+#include <iostream>
+int main() {
+    std::string Cars[][3]={{"Civic","City","Brv"},
+        {"yaris","corolla","Fortuner"},
+        {"santro","Tuscon","elantra"}};
+    int rows =sizeof(Cars)/sizeof(Cars[0]);
+    int cols =sizeof(Cars[0])/sizeof(Cars[0][0]);
+    for(int i=0;i<rows;i++) {
+        for(int j=0;j<cols;j++) {
+            std::cout<<Cars[i][j]<<" ";
+        }
+        std::cout<<std::endl;
+    }
+}
